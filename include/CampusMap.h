@@ -12,7 +12,7 @@ struct Landmark {
     std::string name;
     sf::FloatRect area;
     sf::Color color;
-    bool blocksMovement;   // buildings block the player, the gate and sports ground do not
+    bool blocksMovement;   // buildings block the player, the gate and ground do not
 };
 
 class CampusMap {
@@ -22,7 +22,7 @@ public:
     // Builds the simplified COMSATS-style layout used in the game.
     static CampusMap createDefaultCampus();
 
-    void addObstacle(const sf::FloatRect& rect);     // hedges, fountain, ...
+    void addObstacle(const sf::FloatRect& rect);     // hedges, fountain,etc
     void addLandmark(const Landmark& landmark);      // blocking landmarks also become obstacles
 
     // True when the whole rectangle is inside the map and touches no obstacle.
